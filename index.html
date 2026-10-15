@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ByeongUk Choi · 앱</title>
+  <meta name="description" content="동네 한 걸음 — 걸어서 채우는 나만의 전국 지도">
+  <link rel="icon" href="dongne-hangeoreum/icon.png">
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --card: #ffffff;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --line: #e5e5ea;
+      --link: #0a66d6;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --card: #1c1c1e;
+        --text: #f5f5f7;
+        --muted: #98989d;
+        --line: #2c2c2e;
+        --link: #4da3ff;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { max-width: 640px; margin: 0 auto; padding: 56px 16px 64px; }
+    header p { margin: 0; color: var(--muted); font-size: 15px; }
+    h1 { margin: 0 0 4px; font-size: 28px; letter-spacing: -0.02em; }
+    .app {
+      margin-top: 32px;
+      background: var(--card);
+      border-radius: 20px;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 88px 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+    .app img { width: 88px; height: 88px; border-radius: 20px; }
+    .app h2 { margin: 0; font-size: 21px; letter-spacing: -0.01em; }
+    .app .tagline { margin: 2px 0 12px; color: var(--muted); font-size: 15px; }
+    .app .desc { margin: 0 0 16px; font-size: 15px; }
+    .links { display: flex; flex-wrap: wrap; gap: 8px 16px; padding: 16px 0 0; margin: 0; border-top: 1px solid var(--line); list-style: none; }
+    .links a { color: var(--link); text-decoration: none; font-size: 15px; font-weight: 500; }
+    .links a:hover { text-decoration: underline; }
+    footer { margin-top: 40px; color: var(--muted); font-size: 13px; }
+    @media (max-width: 480px) {
+      main { padding-top: 40px; }
+      .app { grid-template-columns: 1fr; gap: 16px; }
+      .app img { width: 72px; height: 72px; border-radius: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>ByeongUk Choi</h1>
+      <p>개인 개발자가 만드는 iOS 앱</p>
+    </header>
+
+    <section class="app" aria-labelledby="dongne">
+      <img src="dongne-hangeoreum/icon.png" alt="동네 한 걸음 앱 아이콘">
+      <div>
+        <h2 id="dongne">동네 한 걸음</h2>
+        <p class="tagline">걸어서 채우는 나만의 전국 지도</p>
+        <p class="desc">걸은 길을 따라 지나온 동네가 지도에 하나씩 남아요. 전국 3,558개 읍면동 가운데 어디까지 걸었는지 천천히 채워 보세요. 회원가입 없이, 위치 기록은 내 기기에만 저장돼요.</p>
+        <ul class="links">
+          <li><a href="https://apps.apple.com/kr/app/id6808459656">App Store</a></li>
+          <li><a href="https://encouraging-source-c3f.notion.site/3ec502575fc2810292d1d5cca1b72ce5">도움말·문의</a></li>
+          <li><a href="https://encouraging-source-c3f.notion.site/3ec502575fc281aa944fc4a9a13ab34c">개인정보 처리방침</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>© 2026 ByeongUk Choi</footer>
+  </main>
+</body>
+</html>
